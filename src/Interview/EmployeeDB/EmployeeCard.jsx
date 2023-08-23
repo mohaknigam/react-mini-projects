@@ -1,13 +1,41 @@
+import { useContext, useState } from "react";
+import UserContext from "../utils/UserContext";
+import EmptyUI from "./EmptyUI";
+
 const EmployeeCard = () => {
-  return (
+  const defaultImgUrl = "https://cdn-icons-png.flaticon.com/512/0/93.png";
+  const { usersList, currentPerson } = useContext(UserContext);
+
+  const {
+    firstName,
+    lastName,
+    imageUrl,
+    email,
+    contactNumber,
+    age,
+    dob,
+    address,
+  } = currentPerson;
+  const checkIsPersonAvailable = usersList.find(
+    (item) =>
+      item?.id === currentPerson?.id &&
+      item?.contactNumber === currentPerson?.contactNumber
+  );
+  return Object.keys(currentPerson).length !== 0 &&
+    checkIsPersonAvailable !== undefined ? (
     <div className="employee-card-container">
-      <img src="https://cdn-icons-png.flaticon.com/512/0/93.png" alt="image" />
-      <h3>Mohak Nigam (25)</h3>
-      <p>Address</p>
-      <p>abc@gmmail.com</p>
-      <p>Mobile - 646565</p>
-      <p>DOB - 15/25/56</p>
+      <img src={imageUrl ?? defaultImgUrl} alt="image" />
+      <h3>{firstName + " " + lastName + ` (${age})`}</h3>
+      <p>{address}</p>
+      <p>{email}</p>
+      <p>{contactNumber}</p>
+      <p>{dob}</p>
     </div>
+  ) : (
+    <EmptyUI
+      text="No Data to Preview !!"
+      description="Click on the List Tile to preview"
+    />
   );
 };
 

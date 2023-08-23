@@ -1,13 +1,19 @@
+import { useContext } from "react";
 import bin from "../../images/delete-icon.png";
-const ListTile = ({ firstName, lastName, id, handleDelete }) => {
+import UserContext from "../utils/UserContext";
+const ListTile = ({ item, setAllDeleted }) => {
+  const { usersList, setCurrentPerson, setUsersList } = useContext(UserContext);
+  const { firstName, lastName, id } = item;
+
   const handleImageClick = (event) => {
-    console.log("abc");
-    handleDelete(id);
+    if (usersList?.length === 1) setAllDeleted(true);
+    const reducedlist = usersList.filter((item) => item.id !== id);
+    setUsersList(reducedlist);
     event.stopPropagation();
   };
 
   const handleTileClick = () => {
-    console.log("tile clicked");
+    setCurrentPerson(item);
   };
   return (
     <div className="list-tile" onClick={handleTileClick}>

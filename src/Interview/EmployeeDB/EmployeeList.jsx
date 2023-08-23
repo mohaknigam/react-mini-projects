@@ -1,50 +1,33 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ListTile from "./ListTile";
 import Shimmer from "./Shimmer";
 import useEmployees from "../utils/useEmployees";
-import AllDeleted from "./AllDeleted";
+import UserContext from "../utils/UserContext";
+import EmptyUI from "./EmptyUI";
 const EmployeeList = () => {
-  const dataList = useEmployees();
-
-  const [allData, setAllData] = useState(dataList);
+  const { usersList, setUsersList } = useContext(UserContext);
   const [allDeleted, setAllDeleted] = useState(false);
-
-  useEffect(() => {
-    console.log("effect");
-    const sortedList = dataList
-      .slice()
-      .sort((a, b) => a.firstName.localeCompare(b.firstName));
-    setAllData(sortedList);
-  }, [dataList]);
-
-  const handleDelete = (id) => {
-    if (allData.length === 1) setAllDeleted(true);
-    const reducedlist = allData.filter((item) => item.id !== id);
-    setAllData(reducedlist);
-  };
 
   return (
     <div className="list-container">
       <div>
-        <div className="list-heading">Employee List - {allData.length}</div>
+        <div className="list-heading">Employee List - {usersList?.length}</div>
         <hr />
       </div>
       <div className="list">
-        {allData.length === 0 ? (
+        {usersList?.length === 0 ? (
           allDeleted ? (
-            <AllDeleted />
+            <EmptyUI text="Empty !!" description="Add Employee Please" />
           ) : (
             <Shimmer />
           )
         ) : (
-          allData.map(({ firstName, lastName, id }) => {
+          usersList?.map((item) => {
             return (
               <ListTile
-                firstName={firstName}
-                lastName={lastName}
-                id={id}
-                key={id}
-                handleDelete={handleDelete}
+                key={item?.id}
+                item={item}
+                setAllDeleted={setAllDeleted}
               />
             );
           })

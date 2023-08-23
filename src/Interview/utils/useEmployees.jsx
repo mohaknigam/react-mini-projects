@@ -5,7 +5,6 @@ const useEmployees = () => {
 
   useEffect(() => {
     fetchData();
-    console.log(12);
   }, []);
 
   const fetchData = async () => {
