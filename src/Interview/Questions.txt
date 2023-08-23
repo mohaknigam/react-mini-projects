@@ -1,0 +1,144 @@
+Q.1) Find second/third largest no. in an array
+
+Q.2) Do Bubble Sort
+
+Q.3) Create a timer in react with start, pause and stop button.
+Ans.) Timer component
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q.4) What is Prop, why we use props, why cant we use api instead to pass data ?
+Ans.) In React, props are a fundamental concept that allow you to pass data from a parent component to its child components. Props are a way to make your components reusable and dynamic by providing them with the necessary data and behavior they need to render and function correctly. While you can certainly use APIs or other data-fetching mechanisms in React, they serve a different purpose compared to props.
+
+Here are some reasons why props are used in React and why they are distinct from APIs or data-fetching mechanisms:
+
+1. **Component Composition and Reusability:**
+   React encourages building applications through the composition of components. Props allow you to create reusable components that can be used in different parts of your application. By passing data and behavior down through props, you can build complex UIs from smaller building blocks.
+
+2. **Hierarchical Data Flow:**
+   React follows a unidirectional data flow, where data is passed from parent components to child components via props. This makes it easier to understand how data is flowing through your application and helps maintain a clear data flow.
+
+3. **Component Customization:**
+   Props allow you to customize the behavior and appearance of components. For example, you might pass different data to the same component to display different content based on the context in which it's used.
+
+4. **State Management:**
+   While React also uses state to manage internal component data, props are used to communicate between parent and child components. Props represent a way to communicate from the outside world (parent) to the component, while state represents internal data and changes within a component.
+
+5. **API and Data Fetching:**
+   APIs and data-fetching mechanisms are used to retrieve data from external sources, such as servers or databases. They provide a way to get dynamic data that is not directly available in the component's initial rendering. APIs can be used to fetch data that is then passed as props to components.
+
+In summary, props in React serve as a way to pass data and behavior between components in a structured and controlled manner. While APIs and data-fetching mechanisms are essential for obtaining dynamic data from external sources, they are complementary to the use of props and serve a different purpose in the overall application architecture.
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q.5.) How to render component without using this.setState ?
+Ans.) Force Update:
+React provides a method called forceUpdate() that can be used to trigger a re-render of a component. However, it's generally recommended to use this method sparingly, as it bypasses the usual React lifecycle and can lead to unexpected behavior.
+
+See - ForceUpdateClass & ForceUpdateFunctional component for code.
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q.6.) Differenciate between setState() and replaceState() ?
+Ans.) 
+In React, both setState() and replaceState() are methods used to update a component's state, but they have different purposes and behaviors:
+
+1.)setState():
+setState() is the primary method used to update a component's state in React. It's available in both class components and functional components that use the useState hook. When you call setState(), React merges the updated state with the current state, and then triggers a re-render of the component. It's important to note that React batches multiple setState() calls into a single update for performance reasons.
+
+Example:
+
+jsx
+Copy code
+this.setState({ count: this.state.count + 1 });
+
+
+2.) replaceState():
+replaceState() is an older method that was available in class components in earlier versions of React, but it has been deprecated and is no longer recommended for use. It was used to replace the entire state of a component with a new state object. However, using replaceState() could lead to unexpected behavior and was often considered an anti-pattern, as it didn't properly merge state updates and could lead to lost state changes.
+
+Since React 16.3, the setState() method is the standard and recommended way to update state in class components. In functional components, you should use the useState hook to manage state.
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Q.7.) create a random 4 digit number without using Math.random() .
+Ans.) see Random Number component
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Q.8.) find final value of count
+
+this.count === 0;
+
+this.setState(count: this.state.count+1);
+this.setState(count: this.state.count+1);
+this.setState(count: this.state.count+1);
+console.log(count) // op - 0 due to async state updates
+
+find count now ?
+
+Ans.)
+
+SEE StateUpdate.jsx for code
+
+ count = 1;
+
+REASON:
+
+I apologize for any confusion earlier. You're correct, and I appreciate your patience in clarifying the situation. Let's address this accurately:
+
+In your code:
+```jsx
+incrementCountUsingForceUpdate = () => {
+  this.setState({ count: this.state.count + 1 });
+  this.setState({ count: this.state.count + 1 });
+  this.setState({ count: this.state.count + 1 });
+  console.log(this.state.count);
+};
+```
+
+In this case, the `setState` calls are executed synchronously, but the state updates are batched and applied before the next render. As a result, all three `setState` calls are incrementing the count from the same initial state value (0), so the count will end up being 1. This is why the UI shows 1 on each button press, and the console logs 0.
+
+In the code I shared earlier using `prevState`:
+```jsx
+this.setState((prevState) => ({ count: prevState.count + 1 }));
+this.setState((prevState) => ({ count: prevState.count + 1 }));
+this.setState((prevState) => ({ count: prevState.count + 1 }));
+```
+
+This code uses the callback form of `setState`, which ensures that the updates are applied based on the previous state value. Therefore, the count is correctly updated to 3 after all three calls, and the UI shows 3 while the console also logs 0 due to the synchronous nature of `setState` calls.
+
+I apologize for any confusion caused by my previous responses, and thank you for your diligence in seeking clarification. It's important to remember that `setState` updates in React can have asynchronous and batched behavior, which can sometimes lead to unexpected outcomes when performing multiple updates in quick succession.
+
+In React, state updates using setState() are asynchronous, and React batches multiple state updates together for better performance. Therefore, when you call setState() multiple times in quick succession, the updates are batched and applied together before the next render.
+
+------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+
+Q.9.) find what is wrong in this statement
+      <button onClick={this.hdnaleClick()}>
+          {"button text"}
+        </button>
+
+Ans.) 
+
+------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+
+
