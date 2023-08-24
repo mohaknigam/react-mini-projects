@@ -34,7 +34,6 @@ const CountDown = () => {
     }
 
     return () => {
-      console.log("before");
       clearInterval(intervalRef.current);
     };
   }, [start, isPause]);

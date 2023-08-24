@@ -8,6 +8,11 @@ import Timer from "./Interview/Components/Timer";
 import CountDown from "./Interview/Components/CountDown";
 import Sample from "./Interview/Components/Sample";
 import DBPage from "./Interview/EmployeeDB/DBPage";
+import StarRating from "./Interview/Components/StarRating";
+import SearchFeature from "./Interview/Components/SearchFeature";
+import Carousel from "./Interview/Components/Carousel";
+import ApiTask from "./Interview/Components/ApiTask";
+import Todo from "./Interview/Components/Todo";
 
 function App() {
   return (
@@ -19,7 +24,12 @@ function App() {
       {/* <Timer /> */}
       {/* <CountDown /> */}
       {/* <Sample /> */}
-      <DBPage />
+      {/* <DBPage /> */}
+      {/* <StarRating /> */}
+      {/* <SearchFeature /> */}
+      {/* <Carousel /> */}
+      {/* <ApiTask /> */}
+      <Todo />
     </div>
   );
 }
