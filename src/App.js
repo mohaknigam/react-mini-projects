@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { nestedFileStructure } from "./Interview/Constants";
 import ForceUpdateClass from "./Interview/Components/ForceUpdateClass";
 import StateUpdate from "./Interview/Components/StateUpdate";
 import RandomNumber from "./Interview/Components/RandomNumber";
@@ -13,8 +14,17 @@ import SearchFeature from "./Interview/Components/SearchFeature";
 import Carousel from "./Interview/Components/Carousel";
 import ApiTask from "./Interview/Components/ApiTask";
 import Todo from "./Interview/Components/Todo";
+import FolderStructure from "./Interview/Components/FolderStructure";
+import { useState } from "react";
+import useAddItems from "./Interview/utils/useAddItem";
 
 function App() {
+  const [explorerData, setExplorerData] = useState(nestedFileStructure);
+  const { insertNode } = useAddItems();
+  const handleInsertNode = (folderId, item, isFolder) => {
+    const newTree = insertNode(explorerData, folderId, item, isFolder);
+    setExplorerData(newTree);
+  };
   return (
     <div className="App">
       {/* <ForceUpdateClass /> */}
@@ -29,7 +39,11 @@ function App() {
       {/* <SearchFeature /> */}
       {/* <Carousel /> */}
       {/* <ApiTask /> */}
-      <Todo />
+      {/* <Todo /> */}
+      <FolderStructure
+        explorerData={explorerData}
+        handleInsertNode={handleInsertNode}
+      />
     </div>
   );
 }

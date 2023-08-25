@@ -87,3 +87,27 @@
   justify-content: center;
   align-items: center;
 }
+
+.tile {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: start;
+  cursor: pointer;
+  margin: 5px;
+  gap: 5px;
+  background-color: aliceblue;
+}
+.tile > img {
+  height: 22px;
+  width: 22px;
+  margin-right: 5px;
+}
+
+.recursive-container {
+  margin-left: 25px;
+}
+
+.btn-container {
+  margin-left: 30px;
+}

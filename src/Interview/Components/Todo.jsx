@@ -24,8 +24,11 @@ const Todo = () => {
   };
 
   const handleAdd = () => {
-    const finalList = [...list, input];
-    setList(finalList);
+    // do not add string which is already present in list
+    if (!list.includes(input)) {
+      const finalList = [...list, input];
+      setList(finalList);
+    }
     setInput("");
   };
   return (
