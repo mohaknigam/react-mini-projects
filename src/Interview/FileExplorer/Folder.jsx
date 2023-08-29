@@ -44,6 +44,8 @@ const Folder = ({ explorerData, handleInsertNode }) => {
         <div className="btn-container">
           <button onClick={(e) => handleAdd(e, false)}>+ File</button>
           <button onClick={(e) => handleAdd(e, true)}>+ Folder</button>
+          <button>Rename</button>
+          <button>Delete</button>
         </div>
       </div>
       <div

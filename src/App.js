@@ -14,7 +14,8 @@ import SearchFeature from "./Interview/Components/SearchFeature";
 import Carousel from "./Interview/Components/Carousel";
 import ApiTask from "./Interview/Components/ApiTask";
 import Todo from "./Interview/Components/Todo";
-import FileExplorer from "./Interview/Components/FileExplorer";
+import FileExplorer from "./Interview/FileExplorer/FileExplorer";
+import InfiniteScroll from "./Interview/Components/InfiniteScroll";
 
 function App() {
   return (
@@ -32,7 +33,8 @@ function App() {
       {/* <Carousel /> */}
       {/* <ApiTask /> */}
       {/* <Todo /> */}
-      <FileExplorer />
+      {/* <FileExplorer /> */}
+      <InfiniteScroll />
     </div>
   );
 }
