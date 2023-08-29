@@ -91,7 +91,7 @@
 .tile {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: start;
   cursor: pointer;
   margin: 5px;
@@ -104,10 +104,25 @@
   margin-right: 5px;
 }
 
+.tile > span {
+  font-weight: bold;
+}
+
 .recursive-container {
   margin-left: 25px;
 }
 
 .btn-container {
   margin-left: 30px;
+}
+
+.btn-container > button {
+  margin: 3px;
+  padding: 3px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background-color: lightskyblue;
+  padding-right: 10px;
+  font-weight: bold;
 }
