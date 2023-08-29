@@ -126,3 +126,9 @@
   padding-right: 10px;
   font-weight: bold;
 }
+
+.tile-container {
+  border: 1px solid black;
+  margin: 20px 150px;
+  padding: 10px;
+}

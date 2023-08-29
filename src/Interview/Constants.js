@@ -36,6 +36,8 @@ export const items = [
 
 export const api_url = "https://reqres.in/api/users";
 
+export const dummy_api_url = "https://dummyjson.com/products?limit=100";
+
 export const nestedFileStructure = {
   type: "folder",
   name: "root",
