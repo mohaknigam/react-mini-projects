@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+.emi__container {
+  font-family: Poppins;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.emi__container > input {
+  width: 50%;
+}
+
+.slider {
+  width: 100%;
+}
+.lables {
+  display: flex;
+  justify-content: space-between;
+}
+.slider__container {
+  width: 50%;
+}
+.tenure-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 50%;
+}
+
+.tenure-btn {
+  width: 15%;
+  height: 50px;
+  border: none;
+  border-radius: 100px;
+  background-color: rgb(226, 226, 226);
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #009ad6;
+  color: white;
+}
+
+.title {
+  text-decoration: underline;
+}

@@ -1,5 +1,9 @@
 import { v4 as uuidv4 } from "uuid";
 
+export const tenureData = [12, 24, 36, 48, 60];
+
+export const myGithubAPI = "https://api.github.com/users/mohaknigam";
+
 export const dummyList = [
   "apple",
   "mango",
