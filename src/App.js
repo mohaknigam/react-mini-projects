@@ -17,7 +17,7 @@ import Todo from "./Interview/Components/Todo";
 import FileExplorer from "./Interview/FileExplorer/FileExplorer";
 import InfiniteScroll from "./Interview/InfiniteScroll/InfiniteScroll";
 import Pagination from "./Interview/Pagination/Pagination";
-import EMICalculator from "./Interview/EMICalculator/EMICalculator";
+>>>>>>>>> Temporary merge branch 2
 
 function App() {
   return (
@@ -37,8 +37,8 @@ function App() {
       {/* <Todo /> */}
       {/* <FileExplorer /> */}
       {/* <InfiniteScroll /> */}
-      {/* <Pagination /> */}
-      <EMICalculator />
+      <Pagination />
+>>>>>>>>> Temporary merge branch 2
     </div>
   );
 }
