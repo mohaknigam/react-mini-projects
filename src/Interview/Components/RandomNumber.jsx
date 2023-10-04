@@ -4,7 +4,7 @@ const RandomNumber = () => {
 
   const sleep = (milliseconds) => {
     return new Promise((resolve) => {
-      setInterval(resolve, milliseconds);
+      setTimeout(resolve, milliseconds);
     });
   };
 
@@ -16,15 +16,15 @@ const RandomNumber = () => {
 
     const fourDigNumber = currTime.slice(-4);
 
+    /* to convert 0937 or 0023 or 0003 type of numbers into proper 4 digit numbers with no zeroes at starting */
     const rearrangedNumber = (parseInt(fourDigNumber) % 9000) + 1000;
 
     return rearrangedNumber.toString();
   };
 
-  const handleClick = () => {
-    createRandomNumber().then((result) => {
-      setNumber(result);
-    });
+  const handleClick = async () => {
+    const result = await createRandomNumber();
+    setNumber(result);
   };
   return (
     <div>
