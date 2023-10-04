@@ -1,0 +1,78 @@
+.mod-container {
+  margin-top: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mod-container > button {
+  cursor: pointer;
+  padding: 12px 18px;
+}
+
+/* mod-style.css */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 800px;
+}
+
+.modalLeft {
+  padding: 20px;
+}
+
+.modalRight {
+  padding: 20px;
+}
+
+.modalRight > p.cross {
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+}
+
+.modalRight > .content p {
+  font-size: 18px;
+}
+
+.modalRight > .content h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.btn-container {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-container > button {
+  cursor: pointer;
+  padding: 12px 18px;
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-container > button.cancel {
+  background-color: #e60000;
+}

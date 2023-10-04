@@ -17,6 +17,16 @@ import Todo from "./Interview/Components/Todo";
 import FileExplorer from "./Interview/FileExplorer/FileExplorer";
 import InfiniteScroll from "./Interview/InfiniteScroll/InfiniteScroll";
 import Pagination from "./Interview/Pagination/Pagination";
+import Calculator from "./Interview/Calculator/Calculator";
+import Parent from "./Interview/Hooks/ReactDotMemo/Parent";
+import UseMemoHook from "./Interview/Hooks/MemoizationHooks/UseMemoHook";
+import UseState from "./Interview/Hooks/OtherHooks/UseState";
+import UseRef from "./Interview/Hooks/OtherHooks/UseRef";
+import ParentComponent from "./Interview/Hooks/OtherHooks/ContextAPI/ParentComponent";
+import UseReducerBasic from "./Interview/Hooks/OtherHooks/ReducerHook/UseReducerBasic";
+import UseReducerInterMediate from "./Interview/Hooks/OtherHooks/ReducerHook/UseReducerInterMediate";
+import UseCallbackHook from "./Interview/Hooks/MemoizationHooks/UseCallbackHook";
+import ModalParent from "./Interview/ModalPopup/ModalParent";
 
 function App() {
   return (
@@ -26,7 +36,7 @@ function App() {
       {/* <RandomNumber /> */}
       {/* <Clock /> */}
       {/* <Timer /> */}
-      <CountDown />
+      {/* <CountDown /> */}
       {/* <Sample /> */}
       {/* <DBPage /> */}
       {/* <StarRating /> */}
@@ -37,6 +47,16 @@ function App() {
       {/* <FileExplorer /> */}
       {/* <InfiniteScroll /> */}
       {/* <Pagination /> */}
+      {/* <Calculator /> */}
+      {/* <Parent /> */}
+      {/* <UseMemoHook /> */}
+      {/* <UseState /> */}
+      {/* <UseRef /> */}
+      {/* <ParentComponent /> */}
+      {/* <UseReducerBasic /> */}
+      {/* <UseReducerInterMediate /> */}
+      {/* <UseCallbackHook /> */}
+      <ModalParent />
     </div>
   );
 }
