@@ -24,7 +24,7 @@ function App() {
       {/* <ForceUpdateClass /> */}
       {/* <StateUpdate /> */}
       {/* <RandomNumber /> */}
-      {/* <Clock /> */}
+      <Clock />
       {/* <Timer /> */}
       <CountDown />
       {/* <Sample /> */}
