@@ -40,7 +40,7 @@ const Pagination = () => {
           >
             prev
           </button>
-          {Array(Math.ceil(products.length / 10))
+          {Array(Math.ceil(products.length / 10.0))
             .fill("")
             .map((_, idx) => (
               <span

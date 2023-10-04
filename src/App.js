@@ -17,7 +17,6 @@ import Todo from "./Interview/Components/Todo";
 import FileExplorer from "./Interview/FileExplorer/FileExplorer";
 import InfiniteScroll from "./Interview/InfiniteScroll/InfiniteScroll";
 import Pagination from "./Interview/Pagination/Pagination";
->>>>>>>>> Temporary merge branch 2
 
 function App() {
   return (
@@ -27,7 +26,7 @@ function App() {
       {/* <RandomNumber /> */}
       {/* <Clock /> */}
       {/* <Timer /> */}
-      {/* <CountDown /> */}
+      <CountDown />
       {/* <Sample /> */}
       {/* <DBPage /> */}
       {/* <StarRating /> */}
@@ -37,8 +36,7 @@ function App() {
       {/* <Todo /> */}
       {/* <FileExplorer /> */}
       {/* <InfiniteScroll /> */}
-      <Pagination />
->>>>>>>>> Temporary merge branch 2
+      {/* <Pagination /> */}
     </div>
   );
 }

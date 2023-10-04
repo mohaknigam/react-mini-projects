@@ -25,8 +25,6 @@ const CountDown = () => {
   }, [seconds]);
 
   useEffect(() => {
-    console.log("after");
-
     if (start && !isPause) {
       intervalRef.current = setInterval(() => {
         setSeconds((prevState) => prevState - 1);
@@ -80,6 +78,7 @@ const CountDown = () => {
         <input
           type="number"
           placeholder="Enter Hours"
+          min="0"
           value={inputHours}
           ref={inputRef}
           onChange={(e) => setInputHours(e.target.value)}
@@ -87,12 +86,14 @@ const CountDown = () => {
         <input
           type="number"
           placeholder="Enter Minutes"
+          min="0"
           value={inputMinutes}
           onChange={(e) => setInputMinutes(e.target.value)}
         />
         <input
           type="number"
           placeholder="Enter Seconds"
+          min="0"
           value={inputSeconds}
           onChange={(e) => setInputSeconds(e.target.value)}
         />
