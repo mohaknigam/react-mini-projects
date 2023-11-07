@@ -27,6 +27,9 @@ import UseReducerBasic from "./Interview/Hooks/OtherHooks/ReducerHook/UseReducer
 import UseReducerInterMediate from "./Interview/Hooks/OtherHooks/ReducerHook/UseReducerInterMediate";
 import UseCallbackHook from "./Interview/Hooks/MemoizationHooks/UseCallbackHook";
 import ModalParent from "./Interview/ModalPopup/ModalParent";
+import HomePage from "./Interview/ReduxToolkit/HomePage";
+import { Provider } from "react-redux";
+import store from "./Interview/ReduxToolkit/store";
 
 function App() {
   return (
@@ -56,7 +59,10 @@ function App() {
       {/* <UseReducerBasic /> */}
       {/* <UseReducerInterMediate /> */}
       {/* <UseCallbackHook /> */}
-      <ModalParent />
+      {/* <ModalParent /> */}
+      <Provider store={store}>
+        <HomePage />
+      </Provider>
     </div>
   );
 }
