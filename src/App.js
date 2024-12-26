@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import "./App.css";
+// import "./App.css";
 import { nestedFileStructure } from "./Interview/Constants";
 import ForceUpdateClass from "./Interview/Components/ForceUpdateClass";
 import StateUpdate from "./Interview/Components/StateUpdate";
@@ -30,6 +30,8 @@ import ModalParent from "./Interview/ModalPopup/ModalParent";
 import HomePage from "./Interview/ReduxToolkit/HomePage";
 import { Provider } from "react-redux";
 import store from "./Interview/ReduxToolkit/store";
+import Debounce from "./Interview/Javascript/Debounce";
+import Throttling from "./Interview/Javascript/Throttling";
 
 function App() {
   return (
@@ -60,9 +62,11 @@ function App() {
       {/* <UseReducerInterMediate /> */}
       {/* <UseCallbackHook /> */}
       {/* <ModalParent /> */}
-      <Provider store={store}>
+      {/* <Provider store={store}>
         <HomePage />
-      </Provider>
+      </Provider> */}
+      {/* <Debounce /> */}
+      <Throttling />
     </div>
   );
 }
