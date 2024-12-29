@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-// import "./App.css";
+import "./App.css";
 import { nestedFileStructure } from "./Interview/Constants";
 import ForceUpdateClass from "./Interview/Components/ForceUpdateClass";
 import StateUpdate from "./Interview/Components/StateUpdate";
@@ -32,6 +32,7 @@ import { Provider } from "react-redux";
 import store from "./Interview/ReduxToolkit/store";
 import Debounce from "./Interview/Javascript/Debounce";
 import Throttling from "./Interview/Javascript/Throttling";
+import Bubbling from "./Interview/Javascript/Bubbling";
 
 function App() {
   return (
@@ -50,7 +51,7 @@ function App() {
       {/* <ApiTask /> */}
       {/* <Todo /> */}
       {/* <FileExplorer /> */}
-      {/* <InfiniteScroll /> */}
+      <InfiniteScroll />
       {/* <Pagination /> */}
       {/* <Calculator /> */}
       {/* <Parent /> */}
@@ -66,7 +67,8 @@ function App() {
         <HomePage />
       </Provider> */}
       {/* <Debounce /> */}
-      <Throttling />
+      {/* <Throttling /> */}
+      {/* <Bubbling /> */}
     </div>
   );
 }

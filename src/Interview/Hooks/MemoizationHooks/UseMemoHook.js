@@ -1,6 +1,8 @@
-import { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 
-const ExpensiveCalculation = ({ value }) => {
+// if i will remove react.memo from ExpensiveCalculation then this component will re render everytime text cariable changes in useMemoHook component
+const ExpensiveCalculation = React.memo(({ value }) => {
+  console.log(4);
   const expensiveCalulation = (value) => {
     console.log("function called with : " + value);
     let result = 0;
@@ -19,7 +21,7 @@ const ExpensiveCalculation = ({ value }) => {
       <p>Result of expensive calulation : {calculatedValue}</p>
     </div>
   );
-};
+});
 
 const UseMemoHook = () => {
   /*  the main difference between useMemo and useCallback is usMemo cache values and useCallback caches the function itself */
