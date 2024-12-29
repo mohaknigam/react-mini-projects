@@ -15,7 +15,7 @@ import Carousel from "./Interview/Components/Carousel";
 import ApiTask from "./Interview/Components/ApiTask";
 import Todo from "./Interview/Components/Todo";
 import FileExplorer from "./Interview/FileExplorer/FileExplorer";
-import InfiniteScroll from "./Interview/InfiniteScroll/InfiniteScroll";
+import InfiniteScroll from "./Interview/Low_Level_Design/InfiniteScroll/InfiniteScroll";
 import Pagination from "./Interview/Pagination/Pagination";
 import Calculator from "./Interview/Calculator/Calculator";
 import Parent from "./Interview/Hooks/ReactDotMemo/Parent";
@@ -36,7 +36,7 @@ import Bubbling from "./Interview/Javascript/Bubbling";
 
 function App() {
   return (
-    <div className="App">
+    <div className="h-screen bg-white">
       {/* <ForceUpdateClass /> */}
       {/* <StateUpdate /> */}
       {/* <RandomNumber /> */}
@@ -51,7 +51,7 @@ function App() {
       {/* <ApiTask /> */}
       {/* <Todo /> */}
       {/* <FileExplorer /> */}
-      <InfiniteScroll />
+      {/* <InfiniteScroll /> */}
       {/* <Pagination /> */}
       {/* <Calculator /> */}
       {/* <Parent /> */}
@@ -69,6 +69,7 @@ function App() {
       {/* <Debounce /> */}
       {/* <Throttling /> */}
       {/* <Bubbling /> */}
+      <InfiniteScroll />
     </div>
   );
 }
