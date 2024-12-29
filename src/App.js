@@ -33,6 +33,7 @@ import store from "./Interview/ReduxToolkit/store";
 import Debounce from "./Interview/Javascript/Debounce";
 import Throttling from "./Interview/Javascript/Throttling";
 import Bubbling from "./Interview/Javascript/Bubbling";
+import Accordian from "./Interview/Low_Level_Design/Accordian/Accordian.jsx";
 
 function App() {
   return (
@@ -69,7 +70,8 @@ function App() {
       {/* <Debounce /> */}
       {/* <Throttling /> */}
       {/* <Bubbling /> */}
-      <InfiniteScroll />
+      {/* <InfiniteScroll /> */}
+      <Accordian />
     </div>
   );
 }
