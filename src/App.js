@@ -34,6 +34,7 @@ import Debounce from "./Interview/Javascript/Debounce";
 import Throttling from "./Interview/Javascript/Throttling";
 import Bubbling from "./Interview/Javascript/Bubbling";
 import Accordian from "./Interview/Low_Level_Design/Accordian/Accordian.jsx";
+import CommentsSection from "./Interview/Low_Level_Design/RedditComments/CommentsSection.jsx";
 
 function App() {
   return (
@@ -71,7 +72,8 @@ function App() {
       {/* <Throttling /> */}
       {/* <Bubbling /> */}
       {/* <InfiniteScroll /> */}
-      <Accordian />
+      {/* <Accordian /> */}
+      <CommentsSection />
     </div>
   );
 }
