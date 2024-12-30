@@ -36,6 +36,7 @@ import Bubbling from "./Interview/Javascript/Bubbling";
 import Accordian from "./Interview/Low_Level_Design/Accordian/Accordian.jsx";
 import CommentsSection from "./Interview/Low_Level_Design/RedditComments/CommentsSection.jsx";
 import Carousal from "./Interview/Low_Level_Design/Carousal/Carousal.jsx";
+import MainPagination from "./Interview/Low_Level_Design/Pagination/MainPagination.jsx";
 
 function App() {
   return (
@@ -75,7 +76,8 @@ function App() {
       {/* <InfiniteScroll /> */}
       {/* <Accordian /> */}
       {/* <CommentsSection /> */}
-      <Carousal />
+      {/* <Carousal /> */}
+      <MainPagination />
     </div>
   );
 }
