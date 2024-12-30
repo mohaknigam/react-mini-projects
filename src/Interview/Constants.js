@@ -22,7 +22,7 @@ export const ACTIONS = {
   EVALUATE: "evaluate",
 };
 
-export const items = [
+export const images = [
   {
     id: uuidv4(),
     imageUrl:
@@ -43,6 +43,20 @@ export const items = [
       "https://images.pexels.com/photos/15582923/pexels-photo-15582923.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Item 3",
     description: "Description of item 3",
+  },
+  {
+    id: uuidv4(),
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvO0cl-KzT0dDmlLnWYih2Dp-9wThS4lphYA&s",
+    title: "Item 4",
+    description: "Description of item 4",
+  },
+  {
+    id: uuidv4(),
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2mMpvRHYlX5CePKZji6gM-mIcoJTUhsx5mQ&s",
+    title: "Item 5",
+    description: "Description of item 5",
   },
 ];
 

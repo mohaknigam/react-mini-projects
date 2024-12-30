@@ -35,6 +35,7 @@ import Throttling from "./Interview/Javascript/Throttling";
 import Bubbling from "./Interview/Javascript/Bubbling";
 import Accordian from "./Interview/Low_Level_Design/Accordian/Accordian.jsx";
 import CommentsSection from "./Interview/Low_Level_Design/RedditComments/CommentsSection.jsx";
+import Carousal from "./Interview/Low_Level_Design/Carousal/Carousal.jsx";
 
 function App() {
   return (
@@ -73,7 +74,8 @@ function App() {
       {/* <Bubbling /> */}
       {/* <InfiniteScroll /> */}
       {/* <Accordian /> */}
-      <CommentsSection />
+      {/* <CommentsSection /> */}
+      <Carousal />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { items } from "../Constants";
+import { images } from "../Constants";
 
 const Carousel = () => {
   const [count, setCount] = useState(0);
@@ -23,9 +23,9 @@ const Carousel = () => {
   return (
     <div className="rating-container">
       <button onClick={handlePrevious}>Prev</button>
-      <img src={items[count].imageUrl} alt="image" className="img" />
-      <h3>{items[count].title}</h3>
-      <h4>{items[count].description}</h4>
+      <img src={images[count].imageUrl} alt="image" className="img" />
+      <h3>{images[count].title}</h3>
+      <h4>{images[count].description}</h4>
       <button onClick={handleNext}>Next</button>
     </div>
   );
