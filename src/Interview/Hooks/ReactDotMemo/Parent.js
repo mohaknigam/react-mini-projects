@@ -4,6 +4,8 @@ import Child2 from "./Child2";
 
 const Parent = () => {
   const [name, setName] = useState({ value: "abc" });
+  console.log({ name });
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       setName((prevState) => ({ ...prevState, value: "abc" }));

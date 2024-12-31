@@ -37,10 +37,12 @@ import Accordian from "./Interview/Low_Level_Design/Accordian/Accordian.jsx";
 import CommentsSection from "./Interview/Low_Level_Design/RedditComments/CommentsSection.jsx";
 import Carousal from "./Interview/Low_Level_Design/Carousal/Carousal.jsx";
 import MainPagination from "./Interview/Low_Level_Design/Pagination/MainPagination.jsx";
+import BlockSelector from "./Interview/Low_Level_Design/BlockSelector/BlockSelector.jsx";
+import Scroller from "./Interview/Low_Level_Design/IntersectionObserver/Scroller.jsx";
 
 function App() {
   return (
-    <div className="h-screen bg-white">
+    <div className="h-screen">
       {/* <ForceUpdateClass /> */}
       {/* <StateUpdate /> */}
       {/* <RandomNumber /> */}
@@ -61,7 +63,7 @@ function App() {
       {/* <Parent /> */}
       {/* <UseMemoHook /> */}
       {/* <UseState /> */}
-      {/* <UseRef /> */}
+      <UseRef />
       {/* <ParentComponent /> */}
       {/* <UseReducerBasic /> */}
       {/* <UseReducerInterMediate /> */}
@@ -77,7 +79,9 @@ function App() {
       {/* <Accordian /> */}
       {/* <CommentsSection /> */}
       {/* <Carousal /> */}
-      <MainPagination />
+      {/* <MainPagination /> */}
+      {/* <BlockSelector /> */}
+      {/* <Scroller /> */}
     </div>
   );
 }

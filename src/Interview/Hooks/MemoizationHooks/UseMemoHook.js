@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 
-// if i will remove react.memo from ExpensiveCalculation then this component will re render everytime text cariable changes in useMemoHook component
+// if i will remove react.memo from ExpensiveCalculation then this component will re render everytime text variable changes in useMemoHook component
 const ExpensiveCalculation = React.memo(({ value }) => {
   console.log(4);
   const expensiveCalulation = (value) => {
