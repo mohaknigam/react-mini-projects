@@ -225,7 +225,7 @@ const p4 = new Promise((resolve, reject) => {
   }, 3000);
 });
 
-// Promise.all
+// Promise.all -  waits for all promises to resolve and returns an array of their results. If any of the given promises rejects, it becomes the error of Promise.all, and all other results are ignored.
 
 // Promise.all([p1, p2, p4, p3])
 //   .then((res) => {
@@ -277,7 +277,7 @@ const p4 = new Promise((resolve, reject) => {
 
 //----------------------------------------------------------------------------
 
-// Promise.any
+// Promise.any - waits for the first promise to fulfill, and its result becomes the outcome. If all of the given promises are rejected, AggregateError becomes the error of Promise.any.
 
 // Promise.any([p1, p2, p3, p4])
 //   .then((res) => console.log(res))
@@ -319,7 +319,7 @@ const p4 = new Promise((resolve, reject) => {
 
 //----------------------------------------------------------------------------
 
-// Promise.race
+// Promise.race - waits for the first promise to settle, and its result/error becomes the outcome.
 
 // Promise.race([p1, p2, p3, p4])
 //   .then((res) => {
@@ -353,7 +353,7 @@ const p4 = new Promise((resolve, reject) => {
 
 //----------------------------------------------------------------------------
 
-// All Settled
+// All Settled -  waits for all promises to settle and returns their results as an array of objects with: status: "fulfilled" or "rejected" value (if fulfilled) or reason (if rejected).
 
 // Promise.allSettled([p1, p2, p3, p4])
 //   .then((res) => console.log(res))

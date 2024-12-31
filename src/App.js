@@ -47,7 +47,7 @@ function App() {
       {/* <StateUpdate /> */}
       {/* <RandomNumber /> */}
       {/* <Clock /> */}
-      {/* <Timer /> */}
+      <Timer />
       {/* <CountDown /> */}
       {/* <Sample /> */}
       {/* <DBPage /> */}
@@ -63,7 +63,7 @@ function App() {
       {/* <Parent /> */}
       {/* <UseMemoHook /> */}
       {/* <UseState /> */}
-      <UseRef />
+      {/* <UseRef /> */}
       {/* <ParentComponent /> */}
       {/* <UseReducerBasic /> */}
       {/* <UseReducerInterMediate /> */}
